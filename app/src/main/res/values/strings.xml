@@ -3,6 +3,8 @@
 
     <string name="main_hint_email">Email</string>
     <string name="main_hint_password">Password</string>
-    <string name="main_button_text">Submit</string>
+    <string name="main_button_text">LOG IN</string>
     <string name="err_empty_field">Invalid Password/Email. Please try again.</string>
+    <string name="dialog_message">Email should be a valid email address.
+        \n\nPassword should be at least 8 alphanumerics with no special characters.</string>
 </resources>

@@ -54,9 +54,10 @@
         android:id="@+id/bt_main_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/main_fields_margin_side"
+        android:layout_marginLeft="@dimen/main_button_margin_side"
         android:layout_marginTop="@dimen/main_fields_margin_side"
-        android:layout_marginRight="@dimen/main_fields_margin_side"
+        android:layout_marginRight="@dimen/main_button_margin_side"
+        android:padding="10dp"
         android:text="@string/main_button_text"
         android:textSize="@dimen/main_submit_text_size"
         app:layout_constraintTop_toBottomOf="@id/et_main_password" />
