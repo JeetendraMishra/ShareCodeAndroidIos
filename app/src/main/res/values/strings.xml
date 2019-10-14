@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ShareCodeAndroidIos</string>
+
+    <string name="main_hint_email">Email</string>
+    <string name="main_hint_password">Password</string>
+    <string name="main_button_text">Submit</string>
+    <string name="err_empty_field">Invalid Password/Email. Please try again.</string>
 </resources>
