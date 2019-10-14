@@ -35,10 +35,10 @@ class MainActivity : AppCompatActivity() {
         helpEmailButton = findViewById(R.id.iv_main_email_hint)
         helpPasswordButton = findViewById(R.id.iv_main_pw_hint)
         helpEmailButton?.setOnClickListener{
-            showHelpDialog()
+            showHelpDialog(true)
         }
         helpPasswordButton?.setOnClickListener{
-            showHelpDialog()
+            showHelpDialog(false)
         }
     }
 
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         return email.isEmpty() || password.isEmpty()
     }
 
-    private fun showHelpDialog() {
+    private fun showHelpDialog(isEmail: Boolean) {
 
         // 1. Instantiate an <code><a href="/reference/android/app/AlertDialog.Builder.html">AlertDialog.Builder</a></code> with its constructor
         val builder: AlertDialog.Builder? = this.let {
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 2. Chain together various setter methods to set the dialog characteristics
-        builder?.setMessage(R.string.dialog_message)
+        builder?.setMessage(if (isEmail) R.string.dialog_message else R.string.dialog_message_pw)
 
         // 3. Get the <code><a href="/reference/android/app/AlertDialog.html">AlertDialog</a></code> from <code><a href="/reference/android/app/AlertDialog.Builder.html#create()">create()</a></code>
         val dialog: AlertDialog? = builder?.create()
