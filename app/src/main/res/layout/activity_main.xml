@@ -1,51 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
     tools:context="com.hackathon.sharecodeandroidios.MainActivity">
 
-    <EditText
-        android:id="@+id/main_email"
+    <ImageView
+        android:id="@+id/iv_main_icon"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:hint="@string/main_hint_email"
-        android:layout_marginLeft="@dimen/main_fields_margin_side"
-        android:layout_marginRight="@dimen/main_fields_margin_side"/>
+        android:layout_height="@dimen/main_icon_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/main_icon_top_margin"
+        android:gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_hmn_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/main_password"
-        android:layout_width="match_parent"
+        android:id="@+id/et_main_email"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/main_hint_password"
+        android:layout_marginLeft="@dimen/main_fields_margin_side"
+        android:layout_marginTop="@dimen/main_fields_margin_side"
+        android:layout_marginRight="@dimen/main_fields_margin_side"
+        android:hint="@string/main_hint_email"
+        android:inputType="textEmailAddress"
+        android:lines="1"
+        android:textColor="@android:color/primary_text_dark"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_main_email_hint"
+        app:layout_constraintTop_toBottomOf="@id/iv_main_icon" />
+
+    <EditText
+        android:id="@+id/et_main_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/main_fields_margin_side"
         android:layout_marginRight="@dimen/main_fields_margin_side"
-        app:layout_constraintTop_toBottomOf="@id/main_email" />
+        android:hint="@string/main_hint_password"
+        android:inputType="textPassword"
+        android:lines="1"
+        android:textColor="@android:color/primary_text_dark"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_main_pw_hint"
+        app:layout_constraintTop_toBottomOf="@id/et_main_email" />
 
     <Button
-        android:id="@+id/main_submit"
+        android:id="@+id/bt_main_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/main_fields_margin_side"
+        android:layout_marginTop="@dimen/main_fields_margin_side"
         android:layout_marginRight="@dimen/main_fields_margin_side"
         android:text="@string/main_button_text"
         android:textSize="@dimen/main_submit_text_size"
-        app:layout_constraintTop_toBottomOf="@id/main_password"/>
+        app:layout_constraintTop_toBottomOf="@id/et_main_password" />
+
+    <ImageView
+        android:id="@+id/iv_main_email_hint"
+        android:layout_width="@dimen/main_fields_margin_side"
+        android:layout_height="@dimen/main_fields_margin_side"
+        android:layout_marginRight="@dimen/main_fields_margin_side"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_settings_help"
+        app:layout_constraintBottom_toBottomOf="@id/et_main_email"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_main_email" />
+
+    <ImageView
+        android:id="@+id/iv_main_pw_hint"
+        android:layout_width="@dimen/main_fields_margin_side"
+        android:layout_height="@dimen/main_fields_margin_side"
+        android:layout_marginRight="@dimen/main_fields_margin_side"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_settings_help"
+        app:layout_constraintBottom_toBottomOf="@id/et_main_password"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_main_password" />
 
     <TextView
         android:id="@+id/main_text"
-        android:textSize="42sp"
-        android:layout_margin="5sp"
-        android:textAlignment="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="5sp"
         android:text="Hello World!"
+        android:textAlignment="center"
+        android:textSize="42sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

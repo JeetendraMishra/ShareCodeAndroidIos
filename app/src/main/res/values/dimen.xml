@@ -2,4 +2,6 @@
 <resources>
     <dimen name="main_fields_margin_side">20dp</dimen>
     <dimen name="main_submit_text_size">20sp</dimen>
+    <dimen name="main_icon_height">80dp</dimen>
+    <dimen name="main_icon_top_margin">80dp</dimen>
 </resources>
