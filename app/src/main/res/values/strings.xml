@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ShareCodeAndroidIos</string>
+
+    <string name="main_hint_email">Email</string>
+    <string name="main_hint_password">Password</string>
+    <string name="main_button_text">LOG IN</string>
+    <string name="err_empty_field">Invalid Password/Email. Please try again.</string>
+    <string name="dialog_message">Email should be a valid email address.</string>
+    <string name="dialog_message_pw">Password should be minimum 8 characters long,
+           \n|should contain at least one capital letter,
+           \n|at least one small letter,
+           \n|at least one number and
+           \n|at least one special character among ~!@#$%^&amp;*()-_=+|[]{};:’\“,&lt;.&gt;/?</string>
 </resources>
