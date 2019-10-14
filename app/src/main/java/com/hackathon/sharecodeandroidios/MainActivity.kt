@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         passwordText = findViewById(R.id.et_main_password)
         submitButton = findViewById(R.id.bt_main_submit)
         submitButton?.setOnClickListener {
-            if (checkFields())
+            if (!checkFields())
                 Toast.makeText(this, R.string.err_empty_field, Toast.LENGTH_LONG).show()
             else
                 submit()
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         val email = emailText?.text!!
         val password = passwordText?.text!!
 
-        return email.isEmpty() || password.isEmpty()
+        return isEmailValid(email.toString()) && isPasswordValid(password.toString())
     }
 
     private fun showHelpDialog(isEmail: Boolean) {
