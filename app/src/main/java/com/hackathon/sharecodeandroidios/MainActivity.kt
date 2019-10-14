@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.DialogFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         passwordText = findViewById(R.id.et_main_password)
         submitButton = findViewById(R.id.bt_main_submit)
         submitButton?.setOnClickListener {
-            if (!checkFields())
+            if (!isInputValid())
                 Toast.makeText(this, R.string.err_empty_field, Toast.LENGTH_LONG).show()
             else
                 submit()
@@ -43,10 +42,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun submit() {
-
+        startActivity(AccountActivity.newIntent(this, ""))
     }
 
-    private fun checkFields(): Boolean {
+    private fun isInputValid(): Boolean {
         val email = emailText?.text!!
         val password = passwordText?.text!!
 
