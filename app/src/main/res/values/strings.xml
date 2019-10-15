@@ -12,6 +12,6 @@
            \n|at least one number and
            \n|at least one special character among ~!@#$%^&amp;*()-_=+|[]{};:’\“,&lt;.&gt;/?</string>
 
-    <string name="account_hint_first_name">First Name</string>
+    <string name="account_hint_first_name">You logged in successfully by using shared kotlin code!</string>
     <string name="account_hint_last_name">Last Name</string>
 </resources>

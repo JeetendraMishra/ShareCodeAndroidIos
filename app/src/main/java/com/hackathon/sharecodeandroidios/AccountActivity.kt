@@ -18,24 +18,10 @@ class AccountActivity: AppCompatActivity() {
         }
     }
 
-    var firstNameText: EditText? = null
-    var lastNameText: EditText? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account)
-
-        initUi()
     }
 
-    private fun initUi() {
-        firstNameText = findViewById(R.id.et_account_first_name)
-        lastNameText = findViewById(R.id.et_account_last_name)
 
-        val response: String? = intent.getStringExtra(LOGIN_RESPONSE)
-
-        if (response != null) {
-            // do something
-        }
-    }
 }
