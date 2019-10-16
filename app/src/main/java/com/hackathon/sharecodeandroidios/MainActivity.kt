@@ -42,13 +42,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun submit() {
-        var data =  callLogin(emailText?.text!!.toString(),passwordText?.text!!.toString())
+//        var data =  callLogin(emailText?.text!!.toString(),passwordText?.text!!.toString())
 
-        if(data.trim().equals("200")) {
+//        if(data.trim().equals("200")) {
             startActivity(AccountActivity.newIntent(this, ""))
-        } else {
-            Toast.makeText(this, "Login failure", Toast.LENGTH_LONG).show()
-        }
+//        } else {
+//            Toast.makeText(this, "Login failure", Toast.LENGTH_LONG).show()
+//        }
     }
 
     private fun isInputValid(): Boolean {
