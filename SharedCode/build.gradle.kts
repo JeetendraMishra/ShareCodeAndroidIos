@@ -25,17 +25,23 @@ kotlin {
 
     sourceSets["commonMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
-        implementation("io.ktor:ktor-client-core:1.2.4")
+        implementation("io.ktor:ktor-client-core:1.2.5")
 
-        implementation( "io.ktor:ktor-server-netty:1.2.4")
-        implementation( "io.ktor:ktor-html-builder:1.2.4")
+        implementation( "io.ktor:ktor-server-netty:1.2.5")
+        implementation( "io.ktor:ktor-html-builder:1.2.5")
 
-        implementation( "io.ktor:ktor-client-apache:1.2.4")
+        implementation( "io.ktor:ktor-client-apache:1.2.5")
 
     }
 
     sourceSets["androidMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib")
+    }
+
+    sourceSets["iosMain"].dependencies {
+        implementation("io.ktor:ktor-client-ios:1.2.5")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-native:1.3.2")
+        implementation ("io.ktor:ktor-client-core-native:1.2.5")
     }
 }
 
